@@ -1,0 +1,88 @@
+Q1. Explain with an example each when to use a for loop and a while loop.
+Answer :  FOR Loop : to iterate values in the variable.
+            E.g.  a=[1,2,3]
+                  for k in a:
+                    print(k)
+                      
+                  Output: 1
+                          2
+                          3
+                 
+          
+          While Loop : to execute something till the condition stand True.
+          E.g.  i=0
+                while i < 3:
+                  print(i)
+                  i=i+1
+                  
+                  Output: 0
+                          1
+                          2
+                             
+Q2. Write a python program to print the sum and product of the first 10 natural numbers using for
+and while loop.
+Answer :    
+          #################### FOR LOOP #############
+          sum=0
+          for i in range(1,11):
+            sum=i+sum
+          print("The Sum is", sum)
+          
+          Output: The Sum is 55
+          
+          ###################  WHILE LOOP  ################
+          sum=0
+          i=1
+          while i<=10:
+            sum=i+sum
+            i=i+1
+          print("The Sum is", sum)
+          
+Q3. Create a python program to compute the electricity bill for a household.The per-unit charges in rupees are as follows: For the first 100 units, the user will be charged Rs. 4.5 per
+unit, for the next 100 units, the user will be charged Rs. 6 per unit, and for the next 100 units, the user will
+be charged Rs. 10 per unit, After 300 units and above the user will be charged Rs. 20 per unit.
+You are required to take the units of electricity consumed in a month from the user as input.
+Your program must pass this test case: when the unit of electricity consumed by the user in a month is
+310, the total electricity bill should be 2250.
+
+ANS : 
+
+unit=int(input("Enter your Electricity unit"))
+# unit<=100 = Rs. 4.5/unit
+# 100<unit<=200 = Rs. 6/unit
+# 200<unit<=300 = Rs. 10/unit
+# 300 <unit     = Rs. 20/unit
+#price_100 = 450
+#price_200 = 600
+#price_300 = 1000
+#price_300_more = 20*unit
+if unit <= 100:
+         price_100= unit*4.5
+         print("Your Charges are",price_100)
+if unit > 100 and unit <=200: 
+         price_200 = 450 + (unit - 100)*6
+         print("Your Charges are",price_200)
+if unit >200 and unit <=300:
+         price_300 = 600+(unit - 200)*10
+         print("your charges are",price_300)
+if unit > 300:
+         price_300_more = 450+600+1000+(unit-300)*20
+         print("Your charges are",price_300_more)
+         
+ Q4. Create a list of numbers from 1 to 100. Use for loop and while loop to calculate the cube of each
+number and if the cube of that number is divisible by 4 or 5 then append that number in a list and print
+that list.
+Ans:
+
+#################For Loop ###################
+c=[]
+for i in range(1,101):
+    cube=i*i*i
+    if cube%4==0 or cube%5==0:
+        c.append(i)
+
+print(c)
+
+
+#################### While Loop ##########################
+
